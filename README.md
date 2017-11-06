@@ -1,6 +1,54 @@
-# base
+# hello-ghost
 
-A blank template to be used as a starting point to build projects on Hasura. A "project" is a "gittable" directory in the file system, which captures all the information regarding clusters, services and migrations. It can also be used to keep source code for custom services that you write.
+This project consists of a basic hasura project with Ghost with SQLite deployed.
+
+## Quickstart
+
+Follow this section to get the ghost blog working. Before you begin, ensure you have the latest version of hasura cli tool installed.
+
+### Step 1: Getting the project
+
+```sh
+$ hasura quickstart hello-ghost
+$ cd hello-ghost
+```
+
+The above command does the following:
+1. Creates a new folder in the current working directory called `hello-ghost`
+2. Creates a new free hasura cluster for you and sets that cluster as the default cluster for this project
+3. Initializes `hello-ghost` as a git repository and adds the necessary git remotes.
+
+### Step 2: Getting cluster information
+
+Every hasura project is run on a Hasura cluster. To get details about the cluster this project is running on:
+
+```sh
+$ hasura cluster status
+```
+
+This will give you your cluster status like so
+
+```sh
+INFO Status:
+Cluster Name:       h34-excise98-stg
+Cluster Alias:      hasura
+Kube Context:       h34-excise98-stg
+Platform Version:   v0.15.3
+Cluster State:      Synced
+```
+
+Keep a note of your cluster name. Alternatively, you can also go to your [hasura dashboard](https://dashboard.hasura.io) and see the clusters you have.
+
+### Step 3: Applying the project to the cluster
+
+To deploy your app:
+
+```sh
+$ hasura cluster apply
+```
+When you push for the first time, it might take sometime. Next time onwards, it is really fast.
+
+Once the above commands are executed successfully, your ghost blog goes live at `https://app.cluster-name.hasura-app.io`
 
 ## Files and Directories
 
@@ -23,15 +71,13 @@ The project (a.k.a. project directory) has a particular directory structure and 
 │   ├── routes.yaml
 │   └── session-store.yaml
 ├── migrations
-│   ├── 1504788327_create_table_userprofile.down.yaml
-│   ├── 1504788327_create_table_userprofile.down.sql
-│   ├── 1504788327_create_table_userprofile.up.yaml
-│   └── 1504788327_create_table_userprofile.up.sql
-└── microservices 
-    ├── adminer
-    │   └── k8s.yaml
-    └── flask
-        ├── src/
+│   ├── 1504788327_create_table_user.down.yaml
+│   ├── 1504788327_create_table_user.down.sql
+│   ├── 1504788327_create_table_user.up.yaml
+│   └── 1504788327_create_table_user.up.sql
+└── microservices
+    └── app
+        ├── app/
         ├── k8s.yaml
         └── Dockerfile
 ```
@@ -51,5 +97,5 @@ Info about the clusters added to this project can be found in this file. Each cl
   config:
     configmap: controller-conf
     namespace: hasura
-  data: null  
+  data: null
 ```
