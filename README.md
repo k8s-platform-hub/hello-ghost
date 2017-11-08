@@ -37,7 +37,7 @@ Platform Version:   v0.15.3
 Cluster State:      Synced
 ```
 
-Keep a note of your cluster name. Alternatively, you can also go to your [hasura dashboard](https://dashboard.hasura.io) and see the clusters you have.
+Keep a note of your cluster name. Alternatively, you can also go to your [hasura dashboard](https://dashboard.hasura.io) and see the list of your clusters.
 
 ### Step 3: Applying the project to the cluster
 

@@ -1,4 +1,4 @@
-description: Blank template for a Hasura project
-keywords: base, getting-started
-name: base
+description: A simple ghost blog application running on Hasura
+keywords: ghost, blog, node, wordpress
+name: hello-ghost
 platformVersion: v0.15.3
