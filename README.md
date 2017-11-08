@@ -39,12 +39,14 @@ Cluster State:      Synced
 
 Keep a note of your cluster name. Alternatively, you can also go to your [hasura dashboard](https://dashboard.hasura.io) and see the list of your clusters.
 
-### Step 3: Applying the project to the cluster
+### Step 3: Pushing the project to the cluster
 
 To deploy your app:
 
 ```sh
-$ hasura cluster apply
+$ git add .
+$ git commit -m "First commit"
+$ git push hasura master
 ```
 When you push for the first time, it might take sometime. Next time onwards, it is really fast.
 
