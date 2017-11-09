@@ -1,4 +1,4 @@
 description: A simple ghost blog application running on Hasura
-keywords: ghost, blog, node, wordpress
+keywords: getting-started, ghost, blog, node, wordpress
 name: hello-ghost
 platformVersion: v0.15.3
