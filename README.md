@@ -4,7 +4,7 @@ This project consists of a basic hasura project with Ghost with SQLite deployed.
 
 ## Quickstart
 
-Follow this section to get the ghost blog working. Before you begin, ensure you have the latest version of hasura cli tool installed.
+Follow this section to get the ghost blog working. Before you begin, ensure you have the latest version of [hasura cli tool](https://docs.hasura.io/0.15/manual/install-hasura-cli.html) installed.
 
 ### Step 1: Getting the project
 
