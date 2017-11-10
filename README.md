@@ -1,6 +1,6 @@
 # hello-ghost
 
-This project consists of a basic hasura project with Ghost with SQLite deployed.
+This project consists of a basic Hasura project with Ghost with SQLite deployed.
 
 ## Quickstart
 
@@ -15,12 +15,12 @@ $ cd hello-ghost
 
 The above command does the following:
 1. Creates a new folder in the current working directory called `hello-ghost`
-2. Creates a new free hasura cluster for you and sets that cluster as the default cluster for this project
+2. Creates a new free Hasura cluster for you and sets that cluster as the default cluster for this project
 3. Initializes `hello-ghost` as a git repository and adds the necessary git remotes.
 
 ### Step 2: Getting cluster information
 
-Every hasura project is run on a Hasura cluster. To get details about the cluster this project is running on:
+Every Hasura project is run on a Hasura cluster. To get details about the cluster this project is running on:
 
 ```sh
 $ hasura cluster status
@@ -37,7 +37,7 @@ Platform Version:   v0.15.3
 Cluster State:      Synced
 ```
 
-Keep a note of your cluster name. Alternatively, you can also go to your [hasura dashboard](https://dashboard.hasura.io) and see the list of your clusters.
+Keep a note of your cluster name. Alternatively, you can also go to your [Hasura dashboard](https://dashboard.hasura.io) and see the list of your clusters.
 
 ### Step 3: Pushing the project to the cluster
 
@@ -90,7 +90,7 @@ This file contains some metadata about the project, namely a name, description a
 
 ### `clusters.yaml`
 
-Info about the clusters added to this project can be found in this file. Each cluster is defined by it's name allotted by Hasura. While adding the cluster to the project you are prompted to give an alias, which is just hasura by default. The `kubeContext` mentions the name of kubernetes context used to access the cluster, which is also managed by hasura. The `config` key denotes the location of cluster's metadata on the cluster itself. This information is parsed and cluster's metadata is appended while conf is rendered. `data` key is for holding custom variables that you can define.
+Info about the clusters added to this project can be found in this file. Each cluster is defined by it's name allotted by Hasura. While adding the cluster to the project you are prompted to give an alias, which is just Hasura by default. The `kubeContext` mentions the name of kubernetes context used to access the cluster, which is also managed by Hasura. The `config` key denotes the location of cluster's metadata on the cluster itself. This information is parsed and cluster's metadata is appended while conf is rendered. `data` key is for holding custom variables that you can define.
 
 ```yaml
 - name: h34-ambitious93-stg
