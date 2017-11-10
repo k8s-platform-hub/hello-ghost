@@ -5,9 +5,9 @@ items:
   metadata:
     creationTimestamp: null
     labels:
-      app: app
+      app: blog
       hasuraService: custom
-    name: app
+    name: blog
     namespace: '{{ cluster.metadata.namespaces.user }}'
   spec:
     replicas: 1
@@ -16,7 +16,7 @@ items:
       metadata:
         creationTimestamp: null
         labels:
-          app: app
+          app: blog
       spec:
         containers:
         - image: ghost 
@@ -24,7 +24,7 @@ items:
           - name: PRODUCTION
             value: "true"
           imagePullPolicy: IfNotPresent
-          name: app
+          name: blog
           ports:
           - containerPort: 2368
             protocol: TCP
@@ -37,9 +37,9 @@ items:
   metadata:
     creationTimestamp: null
     labels:
-      app: app
+      app: blog
       hasuraService: custom
-    name: app
+    name: blog
     namespace: '{{ cluster.metadata.namespaces.user }}'
   spec:
     ports:
@@ -47,7 +47,7 @@ items:
       protocol: TCP
       targetPort: 2368 
     selector:
-      app: app
+      app: blog
     type: ClusterIP
   status:
     loadBalancer: {}
