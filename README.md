@@ -50,7 +50,7 @@ $ git push hasura master
 ```
 When you push for the first time, it might take sometime. Next time onwards, it is really fast.
 
-Once the above commands are executed successfully, your ghost blog goes live at `https://app.cluster-name.hasura-app.io`
+Once the above commands are executed successfully, your ghost blog goes live at `https://blog.cluster-name.hasura-app.io`
 
 ## Files and Directories
 
@@ -78,7 +78,7 @@ The project (a.k.a. project directory) has a particular directory structure and 
 │   ├── 1504788327_create_table_user.up.yaml
 │   └── 1504788327_create_table_user.up.sql
 └── microservices
-    └── app
+    └── blog
         ├── app/
         ├── k8s.yaml
         └── Dockerfile

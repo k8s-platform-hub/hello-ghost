@@ -162,11 +162,11 @@ notify:
 
 # To see actual endpoints for these routes, use `$ hasura cluster status`
 
-app:
+blog:
   /:
     corsPolicy: allow_all
     upstreamService:
-      name: app
+      name: blog
       namespace: '{{ cluster.metadata.namespaces.user }}'
     upstreamServicePath: /
     upstreamServicePort: 80
